@@ -1,0 +1,92 @@
+<people>
+	<person>
+		<no>0010</no>
+		<manager>고객센터 상담사</manager>
+		<title>김승균님 칭찬합니다</title>
+		<date>2023-06-09</date>
+		<name>배유미</name>
+		<push>0</push>
+		<views>19</views>
+	</person>
+	<person>
+		<no>0009</no>
+		<manager>고객센터 상담사</manager>
+		<title>코틀린반 홍사라님 칭찬합니다!</title>
+		<date>2023-06-09</date>
+		<name>김경민</name>
+		<push>0</push>
+		<views>26</views>
+	</person>
+	<person>
+		<no>0008</no>
+		<manager>고객센터 상담사</manager>
+		<title>이철의님 칭찬합니다! </title>
+		<date>2023-06-09</date>
+		<name>이경선</name>
+		<push>0</push>
+		<views>21</views>
+	</person>
+	<person>
+		<no>0007</no>
+		<manager>고객센터 상담사</manager>
+		<title>최현제님 칭찬합니다!</title>
+		<date>2023-06-08</date>
+		<name>염무원</name>
+		<push>0</push>
+		<views>27</views>
+	</person>
+	<person>
+		<no>0006</no>
+		<manager>고객센터 상담사</manager>
+		<title>코틀린반 염무원님 칭찬합니다</title>
+		<date>2023-06-08</date>
+		<name>홍사라</name>
+		<push>0</push>
+		<views>30</views>
+	</person>
+	<person>
+		<no>0005</no>
+		<manager>고객센터 상담사</manager>
+		<title>서강인님 칭찬합니다</title>
+		<date>2023-06-08</date>
+		<name>전정호</name>
+		<push>0</push>
+		<views>22</views>
+	</person>
+	<person>
+		<no>0004</no>
+		<manager>고객센터 상담사</manager>
+		<title>이경선님 칭찬합니다</title>
+		<date>2023-06-07</date>
+		<name>이철의</name>
+		<push>0</push>
+		<views>18</views>
+	</person>
+	<person>
+		<no>0003</no>
+		<manager>고객센터 상담사</manager>
+		<title>코틀린반 박병준님 칭찬합니다!</title>
+		<date>2023-06-07</date>
+		<name>김승균</name>
+		<push>0</push>
+		<views>15</views>
+	</person>
+	<person>
+		<no>0002</no>
+		<manager>고객센터 상담사</manager>
+		<title>코틀린반 전정호님 칭찬합니다</title>
+		<date>2023-06-07</date>
+		<name>박병준</name>
+		<push>0</push>
+		<views>20</views>
+	</person>
+	<person>
+		<no>0001</no>
+		<manager>고객센터 상담사</manager>
+		<title>전정호님 칭찬합니다!</title>
+		<date>2023-06-07</date>
+		<name>서강인</name>
+		<push>0</push>
+		<views>16</views>
+	</person>
+</people>
