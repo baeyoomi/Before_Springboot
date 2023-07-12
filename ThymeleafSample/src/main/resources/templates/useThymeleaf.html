@@ -5,12 +5,15 @@
     <title>Thymeleaf Sample</title>
 </head>
 <body>
-  <!--01: 직접 문자를 삽입-->
+<!-- 0711
+  01: 직접 문자를 삽입
   <h1 th:text="'hello world'">표시하는 부분</h1>
-  <!--02: 인라인 처리-->
+  02: 인라인 처리
   <h1>안녕하세요! [[${name}]]씨</h1>
-  <!--03: 값 결합-->
+  03: 값 결합
   <h1 th:text="'오늘의 날씨는 ' + '맑음 ' + '입니다'">표시하는 부분</h1>
-
+-->
+.으로 접근: <span th:text="${mb.id}">ID</span> - <span th:text="${mb.name}">이름</span> <br/>
+[]로 접근: <span th:text="${mb['id']}">ID</span> - <span th:text="${mb['name']}">이름</span>
 </body>
 </html>
