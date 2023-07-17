@@ -3,10 +3,15 @@ package com.example.test.service;
 import com.example.test.entity.Test;
 import com.example.test.repository.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+@Service
+@Transactional
 public class TestServiceImpl implements TestService{
+
     //Autowired 꼭 써줘야 사용가능
     @Autowired
     TestRepository repository;
@@ -36,14 +41,15 @@ public class TestServiceImpl implements TestService{
     public Boolean checkTest(Integer id, Boolean myAnswer) {
         Boolean check = false;
         Optional<Test> optTest = repository.findById(id);
-        if(optTest.idPresent()){
+        if (optTest.isPresent()) {
             Test test = optTest.get();
-            if(test.getAnswer().equals(myAnswer)){
+            if(test.getAnswer().equals(myAnswer)) {
                 check = true;
             }
         }
         return check;
     }
+
 
     @Override
     public void insertTest(Test test) {
