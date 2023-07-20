@@ -11,5 +11,5 @@ import org.springframework.data.annotation.Id;
 public class Test {
     @Id   //자동증가
     private Integer id;
-    private String name;
+    private String author;
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Sample</title>
+</head>
+<body>
+  <h1 th:text="'hello world'">표시하는 부분</h1>
+  <h1>안녕하세요! [[${name}]]씨</h1>
+  <h1 th:text="'오늘의 날씨는 '+ '맑음'+ ' 입니다.'">표시하는 부분</h1>
+
+  <h2>스프링 class 안에 자바 class 넣은것 확인 ${mb.id}</h2>
+    .으로 접근: <span th:text="${mb.id}">ID</span> - <span th:text="${mb.name}">이름</span><br>
+    [] 로 접근: <span th:text="${mb['id']}">ID</span> - <span th:text="${mb['name']}">이름</span><br>
+
+  <h2>object 를 사용(객체화)하여 요약하기 ${mb.id} → *{id}</h2>
+    <th:block th:object="${mb}">
+        { } 로 접근: <span th:text="*{id}">ID</span> - <span th:text="*{name}">이름</span><br>
+        [ ] 로 접근: <span th:text="*{['id']}">ID</span> - <span th:text="*{['name']}">이름</span>
+    </th:block>
+
+  <span th:text="${list[0]}">방위</span>
+  <span th:text="${list[1]}">방위</span>
+  <span th:text="${list[2]}">방위</span>
+  <span th:text="${list[3]}">방위</span>
+
+  .으로 접근: <span th:text="${map.hong.name}">이름 1</span> - <span th:text="${map.lee.name}">이름 2</span><br/>
+  []로 접근: <span th:text="${map['hong']['name']}">이름 1</span> - <span th:text="${map['lee']['name']}">이름 2</span>
+
+  <div th:each="member : ${members}"}>
+      <p>[[${member.id}]] : [[${member.name}]]</p>
+  </div>
+
+</body>
+</html>
