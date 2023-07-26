@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8">
+	<title>베이스: 레이아웃</title>
+  
+    <!--  meta  -->
+    <meta name="Generator" content="Notepad++"/>
+    <meta name="Author" content="배유미"/>
+    <meta name="Keywords" content="배유미, Bae yoomi, 엘지따라하기, 배유미 엘지 포트폴리오, 코딩메모, gumiworld, 배 유 미, 배 유미, Baeyoomi,LGsite,qodbal, 배유니, 배윰ㅣ, 배윰;"/>
+    <meta name="Description" content="배유미의 포트폴리오용 LG사이트 입니다"/> 
+	
+	<!--  css  -->
+	<link rel="stylesheet" href="/css/basicstyle.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../lgfavicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../lgfavicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../lgfavicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../lgfavicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../lgfavicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../lgfavicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../lgfavicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../lgfavicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../lgfavicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../lgfavicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../lgfavicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../lgfavicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../lgfavicon/favicon-16x16.png">
+    <link rel="manifest" href="../lgfavicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+	
+	<!--  script  -->
+	<script src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/jquery.colorbox.js"></script>
+    <script src="/js/prefixfree.min.js"></script>
+    <script src="/js/html5div.js"></script>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/scriptsubbasic.js"></script>	
+</head>
+<body>
+<header class="cf">
+  <div id="header">
+    <div id="topSet" class="cf">
+      <div><a th:href="@{/index.html}"  class="lgLogo fl"><h1><span>LG U+ 포트폴리오 페이지입니다.</span></h1></a></div>
+      <ul class="gnbMenu cf">
+        <li class="gnbUse1 gnbOn"><a href="#" class="showBalloon" title="개인">개인</a></li>
+        <li class="gnbUse2"><a href="#" class="showBalloon" title="기업">기업</a></li>
+        <li class="gnbUse3"><a href="#" class="showBalloon" title="소상공인">소상공인</a></li>
+      </ul>
+    </div><!-- id="topSet" end -->
+    <div id="bottomSet">
+      <div class="lnbMenuWrap">
+        <ul id="nav" class="cf">
+          <li class="menuTitle1"><a href="/sub1/login.html" tabindex="1" class="showBalloon" title="모바일 기기">모바일 기기</a>
+            <div class="menuWrap">
+              <div class="menuInner">
+                <ul class="menuList fl cb">
+                  <li><a href="#" class="subTitle showBalloon" title="5G 휴대폰">5G 휴대폰</a>
+                    <ul class="menuContent">
+                      <li><a href="#" title="전체">전체</a></li>
+                      <li><a href="#" title="삼성">삼성</a></li>
+                      <li><a href="#" title="Apple">Apple</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="4G 휴대폰">4G 휴대폰</a>
+                    <ul class="menuContent">
+                      <li><a href="#" title="전체" >전체</a></li>
+                      <li><a href="#" title="삼성">삼성</a></li>
+                      <li><a href="#" title="Apple">Apple</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="유심/eSIM 가입">유심/eSIM 가입</a>
+                    <ul class="menuContent">
+                      <li><a href="#" title="유심 가입">유심 가입</a></li>
+                      <li><a href="#" title="eSIM 가입">eSIM 가입</a></li>
+                      <li><a href="#" title="친구 추천">친구 추천</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="중고/자급제폰">중고/자급제폰</a>
+                    <ul class="menuContent">
+                      <li><a href="#">중고폰</a></li>
+                      <li><a href="#">자급제폰</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="태블릿">태블릿</a>
+                    <ul class="menuContent">
+                      <li><a href="#">전체</a></li>
+                      <li><a href="#">삼성</a></li>
+                      <li><a href="#">Apple</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="스마트워치">스마트워치</a>
+                    <ul class="menuContent">
+                      <li><a href="#">전체</a></li>
+                      <li><a href="#">삼성</a></li>
+                      <li><a href="#">Apple</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="노트북">노트북</a>
+                    <ul class="menuContent">
+                      <li><a href="#">전체</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="액세서리">액세서리</a>
+                    <ul class="menuContent">
+                      <li><a href="#">전체</a></li>
+                      <li><a href="#">U⁺굿즈</a></li>
+                      <li><a href="#">스마트기기/기타</a></li>
+                      <li><a href="#">음향/영상기기</a></li>
+                      <li><a href="#">충전기기</a></li>
+                      <li><a href="#">케이스/필름</a></li>
+                      <li><a href="#">주변기기</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="menuListBottom cf">
+                  <li class="BottomIcon36 fl showBalloon" title="모델별지원금">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/a_img_wonmoble.png" width="30" height="30" alt="모델별지원금 아이콘" /></div>
+                      <div class="menuSubText">모델별지원금</div>
+                    </a>
+                  </li>
+                </ul>
+              </div><!-- class="menuInner" end -->
+            </div><!-- class="menuWrap" end -->
+          </li><!-- class="menuTitle1" end -->
+
+          <li class="menuTitle2"><a href="/sub2/qna.html" tabindex="2" class="showBalloon" title="모바일 요금제">모바일 요금제</a>
+            <div class="menuWrap">
+              <div class="menuInner">
+                <ul class="menuList fl cb">
+                  <li><a href="#" class="subTitle showBalloon" title="다이렉트">다이렉트</a>
+                    <ul class="menuContent"><li><a href="#">5G</a></li>
+                      <li><a href="#">LTE</a></li>
+                      <li><a href="#">다이렉트 플러스 결합</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="요금제">요금제</a>
+                    <ul class="menuContent">
+                      <li><a href="#">5G</a></li>
+                      <li><a href="#">LTE</a></li>
+                      <li><a href="#">태블릿 및 스마트기기</a></li>
+                      <li><a href="#">듀얼넘버 플러스</a></li>
+                      <li><a href="#">U⁺투게더 결합</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="카테고리팩">카테고리팩</a>
+                    <ul class="menuContent">
+                      <li><a href="#">5G</a></li>
+                      <li><a href="#">LTE</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="부가서비스">부가서비스</a>
+                    <ul class="menuContent">
+                      <li><a href="#">전체</a></li>
+                      <li><a href="#">5G 전용</a></li>
+                      <li><a href="#">데이터</a></li>
+                      <li><a href="#">뮤직/영상</a></li>
+                      <li><a href="#">통화/메시지</a></li>
+                      <li><a href="#">생활편의</a></li>
+                      <li><a href="#">안심/안전</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="해외로밍">해외로밍</a>
+                    <ul class="menuContent">
+                      <li><a href="#">메인</a></li>
+                      <li><a href="#">로밍요금제 신청</a></li>
+                      <li><a href="#">부가서비스 신청</a></li>
+                      <li><a href="#">로밍 이용내역 조회</a></li>
+                      <li><a href="#">로밍 이용방법</a></li>
+                      <li><a href="#">로밍센터 위치 안내</a></li>
+                      <li><a href="/sub2/qna.html">자주하는 질문</a></li>
+                      <li><a href="#">공지사항</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="menuListBottom cf">
+                  <li class="fl showBalloon" title="유심 가입">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/atc04.png" width="36" height="36" alt="유심 가입 아이콘"/></div>
+                      <div class="menuSubText">유심 가입</div>
+                    </a>
+                  </li>
+                  <li class="fl showBalloon" title="친구 추천">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/atc05.png" width="36" height="36" alt="친구 추천 아이콘"/></div>
+                      <div class="menuSubText"><p>친구 추천</p></div>
+                    </a>
+                  </li>
+                </ul>
+              </div><!-- class="menuInner" end -->
+            </div><!-- class="menuWrap" end -->
+          </li><!-- class="menuTitle2" end -->
+
+          <li class="menuTitle3"><a href="/sub3/board.html" tabindex="3" class="showBalloon" title="인터넷/IPTV">인터넷/IPTV</a>
+            <div class="menuWrap">
+              <div class="menuInner">
+                <ul class="menuList fl cb">
+                  <li><a href="#" class="subTitle showBalloon" title="결합상품">결합상품</a>
+                    <ul class="menuContent">
+                      <li><a href="#">요금제</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="인터넷">인터넷</a>
+                    <ul class="menuContent">
+                      <li><a href="#">요금제</a></li>
+                      <li><a href="#">부가서비스</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="IPTV">IPTV</a>
+                    <ul class="menuContent">
+                      <li><a href="#">요금제</a></li>
+                      <li><a href="#">채널안내</a></li>
+                      <li><a href="#">주요 서비스</a></li>
+                      <li><a href="#">부가 서비스</a></li>
+                      <li><a href="#">공지사항</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="스마트홈">스마트홈</a>
+                    <ul class="menuContent">
+                      <li><a href="#">요금제</a></li>
+                      <li><a href="#">스마트홈 기기</a></li>
+                      <li><a href="#">스마트홈 소개</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="전화서비스">전화서비스</a>
+                    <ul class="menuContent">
+                      <li><a href="#">요금제</a></li>
+                      <li><a href="#">인터넷전화 부가서비스</a></li>
+                      <li><a href="#">인터넷전화 기기</a></li>
+                      <li><a href="#">수신자 부담전화</a></li>
+                      <li><a href="#">국제전화 002</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="가입사은품">가입사은품</a>
+                    <ul class="menuContent">
+                      <li><a href="#">전체</a></li>
+                      <li><a href="#">상품권</a></li>
+                      <li><a href="#">TV</a></li>
+                      <li><a href="#">컴퓨터/주변기기</a></li>
+                      <li><a href="#">주방/생활가전</a></li>
+                      <li><a href="#">에어케어/에어컨</a></li>
+                      <li><a href="#">키즈/펫용품</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="소상공인상품">소상공인상품</a>
+                    <ul class="menuContent">
+                      <li><a href="#">매장/사무실 인터넷</a></li>
+                      <li><a href="#">매장/사무실 인터넷전화</a></li>
+                      <li><a href="#">매장/사무실 지능형 CCTV</a></li>
+                      <li><a href="#">매장/사무실 IPTV</a></li>
+                      <li><a href="#">매장/사무실 패키지 상품</a></li>
+                      <li><a href="#">소상공인상품 혜택</a></li>
+                      <li><a href="#">이벤트</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="menuListBottom">
+                  <li class="fl showBalloon" title="넷플릭스">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/atcnetf.png" width="36" height="36" alt="넷플릭스 아이콘"/></div>
+                      <div class="menuSubText">넷플릭스</div>
+                    </a>
+                  </li>
+                </ul>
+              </div><!-- class="menuInner" end -->
+            </div><!-- class="menuWrap" end -->
+          </li><!-- class="menuTitle3" end -->
+
+          <li class="menuTitle4"><a href="/sub1/login.html" tabindex="4" class="showBalloon" title="마이페이지">마이페이지</a>
+            <div class="menuWrap">
+              <div class="menuInner">
+                <ul class="menuList fl cb">
+                  <li><a href="#" class="subTitle showBalloon" title="청구요금 및 납부">청구요금 및 납부</a></li>
+                  <li><a href="#" class="subTitle showBalloon" title="가입정보 관리">가입정보 관리</a>
+                    <ul class="menuContent">
+                      <li><a href="#">내 가입정보 조회/변경</a></li>
+                      <li><a href="#">요금제 조회/변경</a></li>
+                      <li><a href="#">부가서비스 조회/변경/해지</a></li>
+                      <li><a href="#">서비스 일시정지/해제</a></li>
+                      <li><a href="#">서비스 해지</a></li>
+                      <li><a href="#">회원정보</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="주문관리">주문관리</a>
+                    <ul class="menuContent">
+                      <li><a href="#">가입신청 내역</a></li>
+                      <li><a href="#">액세서리 주문내역</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="사용현황">사용현황</a>
+                    <ul class="menuContent">
+                      <li><a href="#">사용내역 조회</a></li>
+                      <li><a href="#">휴대폰결제</a></li>
+                      <li><a href="#">해외로밍 사용량/요금조회</a></li>
+                      <li><a href="#">자녀 요금조회</a></li>
+                      <li><a href="#">시외전화 및 부가전화</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="데이터관리">데이터관리</a>
+                    <ul class="menuContent">
+                      <li><a href="#">참 쉬운 가족 데이터</a></li>
+                      <li><a href="#">데이터 주고받기</a></li>
+                      <li><a href="#">데이터 2배 쿠폰</a></li>
+                      <li><a href="#">데이터 2GB 쿠폰</a></li>
+                      <li><a href="#">가족사랑 데이터</a></li>
+                      <li><a href="#">링(홀) 요금제</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="활동관리">활동관리</a>
+                    <ul class="menuContent">
+                      <li><a href="#">1:1 문의내역</a></li>
+                      <li><a href="#">최근 본 상품</a></li>
+                      <li><a href="#">상품 문의내역</a></li>
+                      <li><a href="#">구매후기</a></li>
+                      <li><a href="#">입고알림</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="멤버십">멤버십</a>
+                    <ul class="menuContent">
+                      <li><a href="#">멤버십 이용내역</a></li>
+                      <li><a href="#">멤버십 변경내역</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="ez포인트">ez포인트</a>
+                    <ul class="menuContent">
+                      <li><a href="#">ez포인트 안내</a></li>
+                      <li><a href="#">ez포인트 조회</a></li>
+                      <li><a href="#">ez포인트 사용</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="menuListBottom">
+                  <li class="BottomIcon36 fl showBalloon" title="내 가입정보 조회">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/atc03.png" width="30" height="30" alt="내 가입정보 조회 아이콘"/></div>
+                      <div class="menuSubText">내 가입정보 조회</div>
+                    </a>
+                  </li>
+                  <li class="fl showBalloon" title="로밍 데이터 사용량">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/atc06.png" width="36" height="36" alt="로밍 데이터 사용량 아이콘"/></div>
+                      <div class="menuSubText"><p>로밍 데이터 사용량</p></div>
+                    </a>
+                  </li>
+                </ul>
+              </div><!-- class="menuInner" end -->
+            </div><!-- class="menuWrap" end -->
+          </li><!-- class="menuTitle4" end -->
+
+          <li class="menuTitle5"><a href="/sub2/qna.html" tabindex="5" class="showBalloon" title="혜택">혜택</a>
+            <div class="menuWrap">
+              <div class="menuInner">
+                <ul class="menuList fl cb">
+                  <li><a href="#" class="subTitle showBalloon" title="이벤트">이벤트</a>
+                    <ul class="menuContent">
+                      <li><a href="#">진행중 이벤트</a></li>
+                      <li><a href="#">지난 이벤트</a></li>
+                      <li><a href="#">선호번호 신청 이벤트</a></li>
+                      <li><a href="#">당첨자 발표</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="멤버십">멤버십</a>
+                    <ul class="menuContent">
+                      <li><a href="#">멤버십 안내</a></li>
+                      <li><a href="#">멤버십 혜택</a></li>
+                      <li><a href="#">영화예매</a></li>
+                      <li><a href="#">공지사항</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="U⁺혜택">U⁺혜택</a>
+                    <ul class="menuContent">
+                      <li><a href="#">온라인 구매 혜택</a></li>
+                      <li><a href="#">장기고객 혜택</a></li>
+                      <li><a href="#">중고폰 가격 보장</a></li>
+                      <li><a href="#">중고폰 보상 신청</a></li>
+                      <li><a href="#">요금 할인 혜택</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="결합할인 혜택">결합할인 혜택</a>
+                    <ul class="menuContent">
+                      <li><a href="#">결합할인 상품</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="제휴혜택">제휴혜택</a>
+                    <ul class="menuContent">
+                      <li><a href="#">제휴카드 할인</a></li>
+                      <li><a href="#">포인트 할인</a></li>
+                      <li><a href="#">제휴사 혜택</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="by U⁺">by U⁺</a>
+                    <ul class="menuContent">
+                      <li><a href="#">유플러스 LIVE</a></li>
+                      <li><a href="#">유플일상</a></li>
+                      <li><a href="#">Why Not?</a></li>
+                      <li><a href="#">아이들나라</a></li>
+                      <li><a href="#">일상비일상의틈</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="menuListBottom">
+                  <li class="fl showBalloon" title="장기고객 혜택">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/atc08.png" width="36" height="36" alt="장기고객 혜택 아이콘"/></div>
+                      <div class="menuSubText">장기고객 혜택</div>
+                    </a>
+                  </li>
+                  <li class="fl showBalloon" title="선택약정할인">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/atc07.png" width="36" height="36" alt="선택약정할인 아이콘"/></div>
+                      <div class="menuSubText"><p>선택약정할인</p></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- class="menuWrap" end -->
+          </li><!-- class="menuTitle5" end -->
+
+          <li class="menuTitle6"><a href="/sub3/board.html" tabindex="6" class="showBalloon" title="고객지원">고객지원</a>
+            <div class="menuWrap">
+              <div class="menuInner">
+                <ul class="menuList">
+                  <li><a href="#" class="subTitle showBalloon" title="공지사항">공지사항</a>
+                    <ul class="menuContent">
+                      <li><a href="#">새 소식</a></li>
+                      <li><a href="#">서비스 장애 안내</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="매장 안내">매장 안내</a>
+                    <ul class="menuContent">
+                      <li><a href="#">매장 찾기</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="간편 해결">간편 해결</a>
+                    <ul class="menuContent">
+                      <li><a href="/sub2/qna.html">자주하는 질문</a></li>
+                      <li><a href="#">스스로 해결 가이드</a></li>
+                      <li><a href="#">인터넷/IPTV 간편진단</a></li>
+                      <li><a href="#">홈서비스가능지역찾기</a></li>
+                      <li><a href="#">인터넷 속도 측정</a></li>
+                      <li><a href="#">넷플릭스 서비스 조회</a></li>
+                      <li><a href="#">위치정보제공 열람신청</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="전문 상담">전문 상담</a>
+                    <ul class="menuContent">
+                      <li><a href="#">1:1 문의</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="방문 신청">방문 신청</a>
+                    <ul class="menuContent">
+                      <li><a href="#">통화 품질 개선 신청</a></li>
+                      <li><a href="#">홈서비스설치변경신청</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="서비스 이용안내">서비스 이용안내</a>
+                    <ul class="menuContent">
+                      <li><a href="#">가입/변경 방법</a></li>
+                      <li><a href="#">필요 서류 안내</a></li>
+                      <li><a href="#">안전한 이용 가이드</a></li>
+                      <li><a href="#">고객센터 안내</a></li>
+                      <li><a href="#">국번이용 안내</a></li>
+                      <li><a href="#">서비스 커버리지</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="휴대폰 분실/파손">휴대폰 분실/파손</a>
+                    <ul class="menuContent">
+                      <li><a href="#">분실 접수/해제</a></li>
+                      <li><a href="#">분실폰 위치 찾기</a></li>
+                      <li><a href="#">파손접수 및 수리</a></li>
+                      <li><a href="#">임대폰 대여</a></li>
+                      <li><a href="#">보험 보상받기</a></li>
+                      <li><a href="#">기기 변경하기</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="subTitle showBalloon" title="고객의 소리">고객의 소리</a>
+                    <ul class="menuContent">
+                      <li><a href="/sub3/board.html">칭찬할래요</a></li>
+                      <li><a href="#">제안할래요</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- class="menuWrap" end -->
+          </li><!-- class="menuTitle6" end -->
+
+          <li class="menuTitle7"><a href="/sub1/login.html" tabindex="7" class="onIcon showBalloon" title="다이렉트">다이렉트</a>
+          </li><!-- class="menuTitle7" end -->
+          <li class="menuTitle8"><a href="/sub2/qna.html" tabindex="8" class="onIcon showBalloon" title="유쓰">유쓰</a>
+          </li><!-- class="menuTitle8" end -->
+          <li class="menuTitle9"><a href="/sub3/board.html" tabindex="9" class="showBalloon" title="유독">유독</a>
+          </li><!-- class="menuTitle9" end -->
+        </ul><!-- id="nav" end -->
+      </div> <!-- id="lnbMenu" end -->
+      <div id="lnbIconMenu" class="cf">
+        <ul>
+          <li><a href="#" class="rollover showBalloon"  tabindex="10" title="메뉴전체보기"><img src="/images/whiteicon_menu_off.png" width="40" height="40" alt="메뉴"/></a></li>
+          <li><a href="#" class="rollover showBalloon"  tabindex="11" title="매장정보"><img src="/images/whiteicon_shop_off.png" width="40" height="40" alt="매장정보"/></a></li>
+          <li><a href="#" class="rollover showBalloon"  tabindex="12" title="검색"><img src="/images/whiteicon_search_off.png" width="40" height="40" alt="검색"/></a></li>
+          <li><a href="#" class="rollover showBalloon"  tabindex="13" title="쇼핑"><img src="/images/whiteicon_shopping_off.png" width="40" height="40" alt="쇼핑"/></a></li>
+          <li class="loginIcon"><a href="#" class="rollover showBalloon"  tabindex="14" title="로그인"><img src="/images/whiteicon_user_off.png" width="50" height="40" alt="로그인"/></a>
+            <ul class="loginMenu fr">
+              <li class="loginBtn">
+                <input type="radio" id="login" name="tab" checked />
+                <input type="radio" id="ezcheck" name="tab" />
+                <div class="buttons cf">
+                  <label for="login"><span class="label1"><a href="/sub1/login.html" class="showBalloon" title="로그인">로그인</a></span></label>
+                  <label for="ezcheck"><span class="label2"><a href="#" class="showBalloon" title="간편조회">간편조회</a></span></label>
+                </div>
+              </li>
+              <li class="loginBorder"><a href="#" class="showBalloon" title="데이터관리">데이터관리</a></li>
+              <li class="loginBorder"><a href="#" class="showBalloon" title="악세서리주문내역">악세서리주문내역</a></li>
+              <li>
+                <ul>
+                  <li class="fl showBalloon" title="청구요금및 납부">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/a_img_wondocument.png" width="30" height="30" alt="청구요금및 납부"/></div>
+                      <div class="menuSubText">청구요금및 납부</div>
+                    </a>
+                  </li>
+                  <li class="fl showBalloon" title="가입정보">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/a_img_document.png" width="30" height="30" alt="가입정보"/></div>
+                      <div class="menuSubText">가입정보</div>
+                    </a>
+                  </li>
+                  <li class="fl showBalloon" title="사용현황">
+                    <a href="#">
+                      <div class="menuSubIcon"><img src="/images/a_img_graph.png" width="30" height="30" alt="사용현황"/></div>
+                      <div class="menuSubText">사용현황</div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div><!-- id="bottomSet" end -->
+  </div><!-- id="header" end -->
+</header><!-- header end -->
+
+
+
+
+<div layout:fragment="content" >
+  여기를 대체함
+</div>
+
+<footer class="cf">
+  <div id="footer" class="cf">
+    <div class="footLeft fl cb">
+      <div class="footerCl cf">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#" class="userBold">개인정보보호정책</a></li>
+          <li><a href="#">통신자료제공사실열람</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">이용자피해예방가이드</a></li>
+          <li><a href="#">미환급금조회</a></li>
+          <li><a href="#">명의도용방지서비스</a></li>
+          <li><a href="#" class="last">장애현황</a></li>
+        </ul>
+      </div>
+      <div class="lgAddress cf">
+        ㈜엘지유플러스 서울특별시 용산구 한강대로 32 대표이사 황현식 사업자등록번호 220-81-39938 통신판매신고 제2015-서울용산-00481호
+      </div>
+      <div class="lgNumber cf">
+        <ul>
+          <li>고객센터 휴대폰 114(무료)</li>
+          <li>1544-0010(유료)</li>
+          <li>인터넷/IPTV/전화 101(무료)</li>
+          <li>가입문의 휴대폰 1644-7009(유료)</li>
+          <li>인터넷/IPTV/전화 1644-7070(유료)</li>
+          <li>스마트홈 1544-0107(유료)</li>
+          <li class="last">소상공인 인터넷/IPTV/전화 1800-8000(유료)</li>
+        </ul>
+      </div>
+      <div class="lgCopy cf">Copyright&copy; LG Uplus Corp. All Rights Reserved.</div>
+      <div class="footerMark cf">
+        <ul>
+          <li class="fl">
+            <a href="#">
+              <div class="footerMarkIcon fl"><img src="/images/footer01.png" width="59" height="40" alt="과학기술정보통신부 웹접근성 준수"/></div>
+              <div class="footerMarkText fl">과학기술정보통신부 웹접근성 준수</div>
+            </a>
+          </li>
+          <li class="fl">
+            <a href="#">
+              <div class="footerMarkIcon fl"><img src="/images/footer02.png" width="45" height="40" alt="정도경영 사이버신문고"/></div>
+              <div class="footerMarkText fl">정도경영 사이버신문고</div>
+            </a>
+          </li>
+          <li class="fl">
+            <a href="#">
+              <div class="footerMarkIcon fl"><img src="/images/footer03.png" width="80" height="40" alt="방송통신 이용자 정보 포털"/></div>
+              <div class="footerMarkText fl">방송통신 이용자 정보 포털</div>
+            </a>
+          </li>
+        </ul>
+      </div><!-- class="footerMark end -->
+    </div><!-- class="footLeft end -->
+    <div class="footRight">
+      <div class="footerMap fr cb">
+        <div><a href="#">Global Store</a></div>
+        <div><a href="#">커버리지맵</a></div>
+      </div>
+      <div class="footerSelect fr cb">
+        <select name="goPage" id="goPage" >
+          <option>바로가기</option>
+          <option value="">LG계열사</option>
+          <option value="">연체정보조회</option>
+          <option value="">개인정보보호 자율감시센터</option>
+          <option value="">휴대폰대출사기주의</option>
+          <option value="">구매협업</option>
+          <option value="">협력회사상생고</option>
+          <option value="">U+알뜰폰 파트너스 홈페이지</option>
+        </select>
+      </div>
+      <div class="footerSNS fr cb">
+        <ul class="fl">
+          <li class="snsImg1"><a href="#">facebook</a></li>
+          <li class="snsImg2"><a href="#">youtube</a></li>
+          <li class="snsImg3"><a href="#">twitter</a></li>
+          <li class="snsImg4"><a href="#">naverblog</a></li>
+          <li class="snsImg5"><a href="#">instagram</a></li>
+          <li class="snsImg6"><a href="#">kakaostory</a></li>
+          <li class="snsImg7"><a href="#">lgblog</a></li>
+        </ul>
+      </div>
+      <div class="w3c fr cb">
+        <ul class="fl">
+          <li class="w3c1">
+            <p>
+              <a href="http://css-validator.kldp.org/check/referer">
+                <img 스타일="테두리:0;폭:80px;높이:15px"
+                     src="//css-validator.kldp.org/images/validate/css-blue"
+                     alt="올바른 CSS입니다!" />
+              </a>
+            </p>
+          </li>
+          <li class="w3c2">
+            <p>
+              <a href="http://css-validator.kldp.org/check/referer">
+                <img 스타일="테두리:0;폭:80px;높이:15px"
+                     src="//css-validator.kldp.org/images/validate/css-blue"
+                     alt="올바른 CSS입니다!" />
+              </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- id="footer" end -->
+</footer><!-- id="footer" end -->
+</body>
+</html>

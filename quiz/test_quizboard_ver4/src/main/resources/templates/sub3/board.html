@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{commons/basic}">
+<head>
+	<meta charset="UTF-8">
+	<title>LG Uplus Board</title>
+	<!--  meta  -->
+		<meta name="Generator" content="Notepad++"/>
+		<meta name="Author" content="배유미"/>
+		<meta name="Keywords" content="배유미, Bae yoomi, 엘지따라하기, 배유미 엘지 포트폴리오, 코딩메모, gumiworld, 배 유 미, 배 유미, Baeyoomi,LGsite,qodbal, 배유니, 배윰ㅣ, 배윰;"/>
+		<meta name="Description" content="배유미의 포트폴리오용 LG사이트 입니다"/>
+
+	<!--  css  -->
+	<link rel="stylesheet" href="/css/basicstyle.css"/>
+	<link rel="stylesheet" href="/css/board.css"/>
+	
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="../lgfavicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../lgfavicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../lgfavicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../lgfavicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../lgfavicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../lgfavicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../lgfavicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../lgfavicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../lgfavicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../lgfavicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../lgfavicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../lgfavicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../lgfavicon/favicon-16x16.png">
+	<link rel="manifest" href="../lgfavicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+	<!--  script  -->
+	<script src="/js/jquery-1.7.1.min.js"></script>
+	<script src="/js/jquery.colorbox.js"></script>
+	<script src="/js/prefixfree.min.js"></script>
+	<script src="/js/html5div.js"></script>
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/scriptsubbasic.js"></script>
+	<script src="/js/scriptboard.js"></script>
+
+</head>
+<body>
+	<section id="section" class="cf" layout:fragment="content">
+		<h3 th:text="${maintitle}" class="hidden">제목</h3>
+		<div id="boardWrap" class="fl">
+			<div class="userCheck fr">
+				<ul class="fl cb">
+					<li><a href="#">개인</a></li>
+					<li><a href="#">〉</a></li>
+					<li><a href="#">고객지원</a></li>
+					<li><a href="#">〉</a></li>
+					<li><a href="#">고객의 소리</a></li>
+					<li><a href="#">〉</a></li>
+					<li><a href="board.html">칭찬할래요</a></li>
+				</ul>
+			
+			
+			</div>
+			<!-- .boardTitle.fl>h2.fl+.subTitle.fl -->
+			<div class="boardTitle fl cb">
+				<h2 class="fl cb">칭찬합니다</h2>
+				<div class="subTitle fl cb"><span>여러분의 칭찬이 더 친절한 LG유플러스 고객 서비스를 만듭니다 <br/>친절한 직원을 칭찬해주세요. <br/>서비스에 대한 질문이나 건의사항은 <span class="textEff">1:1 문의하기</span>로 해주세요.</span></div>
+			</div>
+			<div id="boardSearch" class="fl cb">
+				<div class="searchSelect fl">
+					<label for="search">검색부분</label>
+					<select name="search" id="search">
+						<option value="전체">전체</option>
+						<option value="제목">제목</option>
+						<option value="작성자">작성자</option>
+					</select>			
+				</div>
+				<div class="searchBox fl">
+					<label for="text">검색창</label>
+					<input type="text" name="text" id="text" value="검색어를 입력해주세요." />
+					<button type="submit"><img src="/images/blackicon_search_off.png" width="30" height="30" alt="검색아이콘"/></button>
+				</div>
+			</div>
+			<div class="boardMain fl cb">
+				<div id="mainBoard" class="cf">
+					<div class="boardHeader cf">
+						<div class="headerTitle01"><span>번호</span></div>
+						<div class="headerTitle02"><span>대상</span></div>
+						<div class="headerTitle03"><span>제목</span></div>
+						<div class="headerTitle04"><span>등록일</span></div>
+						<div class="headerTitle05"><span>작성자</span></div>
+						<div class="headerTitle06"><span>추천</span></div>
+						<div class="headerTitle07"><span>조회</span></div>
+					</div>
+					<div th:each="obj : ${mainlist}" class="boardContent cf">
+						<div class="contentBox01" th:text="${obj.no}"></div>
+						<div class="contentBox02" th:text="${obj.manager}"></div>
+						<div class="contentBox03"><a th:href="@{/board/contents}" th:text="${obj.title}"></a></div>
+						<div class="contentBox04" th:text="${obj.date}"></div>
+						<div class="contentBox05" th:text="${obj.name}"></div>
+						<div class="contentBox06" th:text="${obj.push}"></div>
+						<div class="contentBox07" th:text="${obj.views}"></div>
+					</div>
+
+
+				</div><!-- id="mainBoard" end -->
+				<div class="boardPage fl cb">
+					<ul class="cf">
+						<li class="backBackPage"><a href="#">〈〈</a></li>
+						<li class="backPage"><a href="#">〈</a></li>
+						<li class="nowPage"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">...</a></li>
+						<li class="nextPage"><a href="#">〉</a></li>
+						<li class="nextNextPage"><a href="#">〉〉</a></li>
+					</ul>
+				</div> <!-- class="boardPage" end -->
+				<div class="boardButton">
+						<p>
+							<a th:href="@{/boardmake}" class="writeBtn" >글쓰기</a>
+							<a th:href="@{/boardadmin}" class="writeBtn" >관리자권한</a>
+						</p>
+				</div>
+					
+			</div><!-- class="boardMain end -->
+		</div><!-- id="boardWrap" end -->
+	</section><!-- id="section" end -->
+
+</body>
+</html>
