@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{commons/basic}">
+<head>
+  <meta charset="UTF-8">
+  <title>LG Uplus quiz PLAY</title>
+  
+    <!--  meta  -->
+    <meta name="Generator" content="Notepad++"/>
+    <meta name="Author" content="배유미"/>
+    <meta name="Keywords" content="배유미, Bae yoomi, 엘지따라하기, 배유미 엘지 포트폴리오, 코딩메모, gumiworld, 배 유 미, 배 유미, Baeyoomi,LGsite,qodbal, 배유니, 배윰ㅣ, 배윰;"/>
+    <meta name="Description" content="배유미의 포트폴리오용 LG사이트 입니다"/>
+
+    <!--  css  -->
+    <link rel="stylesheet" href="../static/css/basicstyle.css"/>
+    <link rel="stylesheet" href="../static/css/play.css"/>
+    <link rel="stylesheet" href="/css/basicstyle.css"/>
+    <link rel="stylesheet" href="/css/play.css"/>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../lgfavicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../lgfavicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../lgfavicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../lgfavicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../lgfavicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../lgfavicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../lgfavicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../lgfavicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../lgfavicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../lgfavicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../lgfavicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../lgfavicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../lgfavicon/favicon-16x16.png">
+    <link rel="manifest" href="../lgfavicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--  script  -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script src="../js/jquery.colorbox.js"></script>
+    <script src="../js/prefixfree.min.js"></script>
+    <script src="../js/html5div.js"></script>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/scriptsubbasic.js"></script>
+    <script src="/js/scriptplay.js"></script>
+  
+</head>
+<body>
+<section id="section" class="cf" layout:fragment="content">
+	<h3><img src="/images/quizbanner.png" alt="퀴즈 배너"/><span class="hidden">퀴즈 풀고 이벤트 혜택 받기!</span></h3>
+	<th:block th:if="${msg}">
+		<p th:text="${msg}" style="color:red"></p>
+	</th:block>
+	<th:block th:unless="${msg}">
+		<p class="playQu" th:text="${testForm.question}" style="white-space:pre-wrap" >퀴즈 내용</p>
+		<form class="playAn" th:action="@{/quiz/check}" th:object="${testForm}" method="POST">
+			<input type="hidden" th:field="*{id}">
+			<button name="answer" value="1" th:text="${testForm.optiona}">정</button>
+            <button name="answer" value="2" th:text="${testForm.optionb}">답</button>
+            <button name="answer" value="3" th:text="${testForm.optionc}">은</button>
+            <button name="answer" value="4" th:text="${testForm.optiond}">??</button>
+            <input type="hidden" th:field="*{answers}">
+        </form>
+	</th:block>
+	<div class="admin">
+		<a th:href="@{/quiz}">문제제출 화면가기</a>
+	</div>
+</section><!-- id="section" end -->
+</body>
+</html>

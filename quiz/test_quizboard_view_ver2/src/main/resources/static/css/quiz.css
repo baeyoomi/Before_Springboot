@@ -1,0 +1,7 @@
+﻿/* 중간 섹션 큰틀  */
+#section{width:1420px; margin:0 auto; margin:0 auto;}
+	#section>h3{width:1200px; height:500px; line-height:500px; text-align:center; font-size:30px; margin:0 auto; overflow:hidden;;}
+	#section>h3 img{height:500px; vertical-align:middle}
+	#section .play{width:1420px; height:70px; margin:20px auto;}
+	#section .play .playBtn{display:block; text-align:center; background:#eeeeee; border-radius:20px; width:150px; height:50px; line-height:47px; color:#333333; font-size:20px; border:2px solid #999999; font-weight:bold; margin:0 auto;}
+	#section .play .playBtn:hover{background:#ffffff; color:#ff4cd2; border:2px solid #ff4cd2; }
