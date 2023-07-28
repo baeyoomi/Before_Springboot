@@ -1,0 +1,16 @@
+﻿/* 중간 섹션 큰틀  */
+#section{width:1420px; margin:0 auto; }
+	.userCheck{width:1420px; font-size: 12px; color:#888888;}
+	.userCheck ul{float:right;}
+	.userCheck ul li{float:left;}
+	.userCheck ul li a{display:block; padding-right:7px; margin-top:17px;}
+	.boardTitle{width:1420px; height:210px; margin-bottom:16px;}
+	.boardTitle h2{font-size:36px; width:200px; height:115px; line-height:150px; }
+	.boardTitle .subTitle{height:100px;}
+	.boardTitle .subTitle span{color:#888888; font-size:15px; letter-spacing:-1px; font-weight:bold;}
+	.boardTitle .subTitle span .textEff{color:#222222; letter-spacing:-1px; font-weight:bold; text-decoration:underline;}
+	
+	
+
+.boardList{border:1px solid #333333;}
+.boardList ul li{width:110px; padding:5px; float:left; border:1px dotted #dddddd;}
