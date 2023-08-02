@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{commons/basic}">
+<head>
+    <meta charset="UTF-8">
+    <title>LG Uplus Board admin</title>
+    <!--  meta  -->
+    <meta name="Generator" content="Notepad++"/>
+    <meta name="Author" content="배유미"/>
+    <meta name="Keywords" content="배유미, Bae yoomi, 엘지따라하기, 배유미 엘지 포트폴리오, 코딩메모, gumiworld, 배 유 미, 배 유미, Baeyoomi,LGsite,qodbal, 배유니, 배윰ㅣ, 배윰;"/>
+    <meta name="Description" content="배유미의 포트폴리오용 LG사이트 입니다"/>
+
+    <!--  css  -->
+    <link rel="stylesheet" href="/css/basicstyle.css"/>
+    <link rel="stylesheet" href="/css/boardadmin.css"/>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../lgfavicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../lgfavicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../lgfavicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../lgfavicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../lgfavicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../lgfavicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../lgfavicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../lgfavicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../lgfavicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../lgfavicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../lgfavicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../lgfavicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../lgfavicon/favicon-16x16.png">
+    <link rel="manifest" href="../lgfavicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--  script  -->
+    <script src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/jquery.colorbox.js"></script>
+    <script src="/js/prefixfree.min.js"></script>
+    <script src="/js/html5div.js"></script>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/scriptboardadmin.js"></script>
+
+</head>
+<body>
+<section id="section" class="cf" layout:fragment="content">
+    <form class="cf" method="POST" th:action="${boardForm.newBoard}? @{/boardadmin/insert} : @{/boardadmin/update}" th:object="${boardForm}">
+        <input type="hidden" name="push" value="0">
+        <input type="hidden" name="views" value="0">
+        <div class="formWrap">
+			<p th:if="${boardcomplete}" th:text="${boardcomplete}" style="color:blue" align="center;"></p>
+        	<div class="formBox cf">
+        		<div class="makeSelect">
+        		    <label>칭찬대상 </label>
+        		    <select id="manager" th:field="*{manager}">
+        		        <option value="" selected="selected">선택</option>
+        		        <option value="고객센터 상담사">고객센터 상담사</option>
+        		        <option value="설치기사">설치기사</option>
+        		        <option value="네트워크">네트워크</option>
+        		        <option value="A/S기사">A/S기사</option>
+        		        <option value="기타">기타</option>
+        		    </select>
+        		    <div th:if="${#fields.hasErrors('manager')}" th:errors="*{manager}" style="color:red"></div>
+        		</div>
+        		<div class="makeTitle">
+        		    <label>제목</label>
+        		    <input type="text" th:field="*{title}" style="white-space:pre-wrap" requied />
+        		    <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}" style="color:red"></div>
+        		</div>
+        		<div class="makeContent">
+        		    <label>문의 내용</label>
+        		    <textarea cols="94" rows="4" th:field="*{contents}" style="white-space:pre-wrap" ></textarea>
+        		    <div th:if="${#fields.hasErrors('contents')}" th:errors="*{contents}" style="color:red"></div>
+        		</div>
+        		<div class="makeDay">
+        		    <label>작성일</label>
+        		    <input type="text" th:field="*{date}"/>
+        		    <div th:if="${#fields.hasErrors('date')}" th:errors="*{date}" style="color:red"></div>
+        		</div>
+        		<div class="makeName">
+        		    <label>작성자</label>
+        		    <input type="text" th:field="*{name}" maxlength='5'/>
+        		    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color:red"></div>
+        		    <input th:if="${no}" type="hidden" th:field="*{no}">
+        		</div>
+        	</div><!-- class="formBox" end -->
+        </div><!-- class="formWrap" end -->
+        <div class="makeBtn">
+        	<input class="submitButton" type="submit" value="등록">
+        	<div class="boardMainButton">
+        		<a th:href="@{/board}">메인화면</a>
+        	</div>
+        </div>
+    </form>
+
+    <div class="boardList" th:if="${boardForm.newBoard}">
+	    <h3 class="boardDown"><a href="#">등록된 게시물 목록 ▼</a></h3>
+        <h3 class="boardUp"><a href="#">등록된 게시물 목록 ▲</a></h3>
+        <p th:if="${boarddelcomplete}" th:text="${boarddelcomplete}" style="color:blue"></p>
+        <p th:if="${msg}" th:text="${msg}" style="color:red"></p>
+
+        <div class="table" border="1" th:unless="${#lists.isEmpty(boardlist)}" >
+			<div id="mainBoard">
+				<div class="boardHeader cf">
+					<div class="adminHdTitle01"><span>번호</span></div>
+					<div class="adminHdTitle02"><span>칭찬대상</span></div>
+					<div class="adminHdTitle03"><span>제목</span></div>
+					<div class="adminHdTitle04"><span>내용</span></div>
+					<div class="adminHdTitle05"><span>등록일</span></div>
+					<div class="adminHdTitle06"><span>작성자</span></div>
+					<div class="adminHdTitle07"><span>추천</span></div>
+					<div class="adminHdTitle08"><span>조회</span></div>
+					<div class="adminHdTitle09"><span>변경</span></div>
+					<div class="adminHdTitle10"><span>삭제</span></div>
+				</div>
+				<div th:each="obj : ${boardlist}" class="boardContent cf">
+					<div class="conBox01" th:text="${obj.no}"></div>
+					<div class="conBox02" th:text="${obj.manager}"></div>
+					<div class="conBox03"><a th:href="@{/board/contents/{no}(no=${obj.no})}" th:text="${obj.title}"></a></div>
+					<div class="conBox04"><a th:href="@{/board/contents/{no}(no=${obj.no})}" th:text="${obj.contents}"></a></div>
+					<div class="conBox05" th:text="${obj.date}"></div>
+					<div class="conBox06" th:text="${obj.name}"></div>
+					<div class="conBox07" th:text="${obj.push}"></div>
+					<div class="conBox08" th:text="${obj.views}"></div>
+
+					<div class="conBox09">
+						<form method="GET" th:action="@{/boardadmin/{no}(no=${obj.no})}">
+							<input type="submit" value="변경">
+						</form>
+					</div>
+
+					<div class="conBox10">
+						<form method="POST" th:action="@{/boardadmin/delete}">
+							<input type="hidden" name="no" th:value="${obj.no}">
+							<input type="submit" value="삭제">
+						</form>
+					</div>
+				</div>
+            </div>
+        </div>
+
+        <p th:if="${#lists.isEmpty(boardlist)}">등록된 게시물이 없습니다.</p>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{commons/basic}">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+
+<div class="container">
+  <div>
+    // 목록 코드 생략
+  </div>
+  <div class="mainFoot" layout:fragment="content">
+    <div class="mainFootLeft">
+      <div class="TableFooter">
+        <div class="mainDiv" th:with="start=${T(java.lang.Math).floor(logs.number/10)*10 + 1}, last=(${start + 9 < logs.totalPages ? start + 9 : (logs.totalPages == 0 ? 1 : logs.totalPages)})">
+          // 맨 앞으로 (1페이지 이동)
+          <a th:class="${logs.first} ? 'nav navPrevSet hide' : 'nav navPrevSet' " th:href="@{/log/list(page=${1})}" aria-label="Previous">
+            <span aria-hidden="true"><<</span>
+          </a>
+          // 이전 페이지로 (현재 페이지에서 1페이지 앞으로)
+          <a th:class="${logs.first} ? 'nav navPrev hide' : 'nav navPrev' " th:href="${logs.first} ? '#' :@{/log/list(page=${logs.number})}" aria-label="Previous">
+            <span aria-hidden="true"><</span>
+          </a>
+          // 페이징 숫자
+          <ul th:start="${start}" th:last="${last}" th:class="${last >= start} ? 'pageList' : 'hidePage'">
+            <li th:each="page: ${#numbers.sequence(start, last)}" th:class="${page == logs.number + 1} ? 'pageItem on' : 'pageItem'">
+              <a th:text="${page}" th:href="@{/log/list(page=${page})}"></a>
+            </li>
+          </ul>
+          // 다음 페이지로 (현재 페이지에서 1페이지 뒤로)
+          <a th:class="${logs.last} ? 'nav navNext hide' : 'nav navNext' " th:href="${logs.last} ? '#' :@{/log/list(page=${logs.number + 2})}" aria-label="Next">
+            <span aria-hidden="true">></span>
+          </a>
+          // 맨 뒤로 (마지막 페이지 이동)
+          <a th:class="${logs.last} ? 'nav navNextSet hide' : 'nav navNextSet' " th:href="@{/log/list(page=${logs.totalPages})}" aria-label="Next">
+            <span aria-hidden="true">>></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mainFootRight">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

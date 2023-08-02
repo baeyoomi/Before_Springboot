@@ -1,0 +1,39 @@
+﻿/* 중간 섹션 큰틀  */
+#section{width:1420px; margin:0 auto; }
+	.userCheck{width:1420px; font-size: 12px; color:#888888;}
+	.userCheck ul{float:right;}
+	.userCheck ul li{float:left;}
+	.userCheck ul li a{display:block; padding-right:7px; margin-top:17px;}
+	.boardTitle{width:1420px; margin-bottom:16px;}
+	.boardTitle h2{font-size:36px; color:#333333;}
+	
+.viewTitle{width:1400px; padding:10px; height:40px; line-height:40px; background:#f8f8f8; border-top:2px solid #333333;}
+	.viewTitle div {float:left; font-weight:bold; font-size:16px;}
+	.viewTitle div span{float:left; line-height:40px;}
+	.viewTitle .lgColor {width:50px; color:#e6007e; text-align:center;}
+	.viewTitle>span {float:right; margin-right:20px; font-size:12px; color:#666666;}
+	
+.viewInfo{width:1400px; padding:10px; height:40px; line-height:40px; font-size:12px; border-bottom:1px solid #bbbbbb;}
+	.viewInfo .infoRight{float:right; margin-right:20px;}
+	.viewInfo div{float:left;  margin-left:20px; color:#666666;}
+	.textStrong{font-weight:bold; margin-right:5px; color:#333333;}	
+
+.viewContent{width:1360px; padding:30px; font-family:dotum,'돋움',sans-serif,'Malgun Gothic','맑은 고딕'; font-weight:bold; color:#848484; font-size:14px; border-bottom:1px solid #bbbbbb;}
+
+.prevPage{width:1360px; padding:30px; font-size:14px; border-bottom:1px solid #bbbbbb;}
+.prevPage ul li{float:left; margin-right:20px; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+.nextPage{width:1360px; padding:30px; font-size:14px; border-bottom:1px solid #bbbbbb;}
+.nextPage ul li{float:left; margin-right:20px; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+	
+.makeBtn{width:350px; margin:50px auto;}
+	.makeBtn div {float:left; margin-right:10px;}	
+	.submitButton{border:none; font-size:20px;  background:#e6007e; text-align:center; text-align:center; height:50px; width:170px; line-height:50px; font-weight:bold; border-radius:50px; color:#ffffff;}
+	.submitButton:hover{background:#730024;}	
+	.boardMainButton{font-size:20px;  border: 2px solid #bbbbbb; text-align:center; text-align:center; height:46px; width:166px; line-height:46px; font-weight:bold; border-radius:50px;}
+	.boardMainButton:hover{border: 2px solid #e6007e;}
+	.boardMainButton a{color:#333333;}
+	
+.infoText{width:1360px; background:#f8f8f8; border-radius:10px; padding: 30px;  margin-bottom:100px; line-height:2;}
+.infoText h3{font-size:14px; color:#666666;}
+.infoText ul li{font-size:10px; color:#666666;}
+	
