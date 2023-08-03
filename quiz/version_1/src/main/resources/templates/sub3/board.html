@@ -74,11 +74,10 @@
 							<option value="작성자">작성자</option>
 						</select>			
 					</div>
-					<div class="searchBox">
-						<label for="text">검색창</label>
-						<input type="text" name="text" id="text" class="guideText" value="검색어를 입력해주세요." />
+					<form  action="search.php" method="get" class="searchBox">
+						<input type="text" name="keyword" class="guideText" value="검색어를 입력해주세요." />
 						<button type="submit"><img src="/images/blackicon_search_off.png" width="30" height="30" alt="검색아이콘"/></button>
-					</div>
+					</form>
 				</div>
 			</div>
 			<div class="boardMain cf">
@@ -92,34 +91,60 @@
 						<div class="headerTitle06"><span>추천</span></div>
 						<div class="headerTitle07"><span>조회</span></div>
 					</div>
-
-					<div th:each="i : ${#numbers.sequence(0,9)}" th:if="${i < #lists.size(mainlist)}">
-						<div class="boardContent cf">
-							<div class="contentBox01" th:text="${mainlist[i]?.no}"></div>
-							<div class="contentBox02" th:text="${mainlist[i]?.manager}"></div>
-							<div class="contentBox03"><a th:href="@{/board/contents/{no}(no=${mainlist[i]?.no})}" th:text="${mainlist[i]?.title}"></a></div>
-							<div class="contentBox04" th:text="${mainlist[i]?.date}"></div>
-							<div class="contentBox05" th:text="${mainlist[i]?.name}"></div>
-							<div class="contentBox06" th:text="${mainlist[i]?.push}"></div>
-							<div class="contentBox07" th:text="${mainlist[i]?.views}"></div>
+					<div class="boardWrap">
+						<div class="boardDataWrap1">
+							<div class="boardContent cf" th:each="i : ${#numbers.sequence(24,13,-1)}" th:if="${i < #lists.size(mainlist)}">
+								<div class="contentBox01" th:text="${mainlist[i]?.no}"></div>
+								<div class="contentBox02" th:text="${mainlist[i]?.manager}"></div>
+								<div class="contentBox03"><a th:href="@{/board/contents/{no}(no=${mainlist[i]?.no})}" th:text="${mainlist[i]?.title}"></a></div>
+								<div class="contentBox04" th:text="${mainlist[i]?.date}"></div>
+								<div class="contentBox05" th:text="${mainlist[i]?.name}"></div>
+								<div class="contentBox06" th:text="${mainlist[i]?.push}"></div>
+								<div class="contentBox07" th:text="${mainlist[i]?.views}"></div>
+							</div>
+						</div>
+						<div class="boardDataWrap2">
+							<div class="boardContent cf" th:each="i : ${#numbers.sequence(14,5,-1)}" th:if="${i < #lists.size(mainlist)}">
+								<div class="contentBox01" th:text="${mainlist[i]?.no}"></div>
+								<div class="contentBox02" th:text="${mainlist[i]?.manager}"></div>
+								<div class="contentBox03"><a th:href="@{/board/contents/{no}(no=${mainlist[i]?.no})}" th:text="${mainlist[i]?.title}"></a></div>
+								<div class="contentBox04" th:text="${mainlist[i]?.date}"></div>
+								<div class="contentBox05" th:text="${mainlist[i]?.name}"></div>
+								<div class="contentBox06" th:text="${mainlist[i]?.push}"></div>
+								<div class="contentBox07" th:text="${mainlist[i]?.views}"></div>
+							</div>
+						</div>
+						<div class="boardDataWrap3">
+							<div class="boardContent cf" th:each="i : ${#numbers.sequence(4,0,-1)}" th:if="${i < #lists.size(mainlist)}">
+								<div class="contentBox01" th:text="${mainlist[i]?.no}"></div>
+								<div class="contentBox02" th:text="${mainlist[i]?.manager}"></div>
+								<div class="contentBox03"><a th:href="@{/board/contents/{no}(no=${mainlist[i]?.no})}" th:text="${mainlist[i]?.title}"></a></div>
+								<div class="contentBox04" th:text="${mainlist[i]?.date}"></div>
+								<div class="contentBox05" th:text="${mainlist[i]?.name}"></div>
+								<div class="contentBox06" th:text="${mainlist[i]?.push}"></div>
+								<div class="contentBox07" th:text="${mainlist[i]?.views}"></div>
+							</div>
 						</div>
 					</div>
 
+				</div><!-- id="mainBoard" end -->
+
 
 				<div class="boardPage cf">
-					<ul class="cf">
-						<li class="backBackPage"><a href="#">〈〈</a></li>
-						<li class="backPage"><a href="#">〈</a></li>
-						<li class="nowPage"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">...</a></li>
-						<li class="nextPage"><a href="#">〉</a></li>
-						<li class="nextNextPage"><a href="#">〉〉</a></li>
-					</ul>
-				</div> <!-- class="boardPage" end -->
+					<div class="pageWrap">
+						<div><a class="backBackPage" href="#">〈〈</a></div>
+						<div><a class="backPage" href="#">〈</a></div>
+						<ul class="boardtab cf">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+						</ul>
+						<div><a class="nextPage" href="#">〉</a></div>
+						<div><a class="nextNextPage" href="#">〉〉</a></div>
+					</div>
+				</div> <!--class="boardPage" end -->
 			</div><!-- class="boardMain end -->
+
 			<div class="boardButton">
 				<a th:href="@{/boardmake}" class="writeBtn" >글쓰기</a>
 			</div>

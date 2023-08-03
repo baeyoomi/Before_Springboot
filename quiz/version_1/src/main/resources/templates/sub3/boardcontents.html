@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{commons/basic}">
+<head>
+    <meta charset="UTF-8">
+    <title>LG Uplus Board contents</title>
+    <!--  meta  -->
+    <meta name="Generator" content="Notepad++"/>
+    <meta name="Author" content="배유미"/>
+    <meta name="Keywords" content="배유미, Bae yoomi, 엘지따라하기, 배유미 엘지 포트폴리오, 코딩메모, gumiworld, 배 유 미, 배 유미, Baeyoomi,LGsite,qodbal, 배유니, 배윰ㅣ, 배윰;"/>
+    <meta name="Description" content="배유미의 포트폴리오용 LG사이트 입니다"/>
+
+    <!--  css  -->
+    <link rel="stylesheet" href="/css/basicstyle.css"/>
+    <link rel="stylesheet" href="/css/boardcontents.css"/>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../lgfavicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../lgfavicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../lgfavicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../lgfavicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../lgfavicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../lgfavicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../lgfavicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../lgfavicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../lgfavicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../lgfavicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../lgfavicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../lgfavicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../lgfavicon/favicon-16x16.png">
+    <link rel="manifest" href="../lgfavicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--  script  -->
+    <script src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/jquery.colorbox.js"></script>
+    <script src="/js/prefixfree.min.js"></script>
+    <script src="/js/html5div.js"></script>
+    <script src="/js/html5shiv.js"></script>
+
+</head>
+<body>
+<section id="section" class="cf" layout:fragment="content">
+	<div class="userCheck cf">
+		<ul>
+			<li><a href="#">개인</a></li>
+			<li><a href="#">〉</a></li>
+			<li><a href="#">고객지원</a></li>
+			<li><a href="#">〉</a></li>
+			<li><a href="#">고객의 소리</a></li>
+			<li><a href="#">〉</a></li>
+			<li><a href="board.html">칭찬할래요</a></li>
+		</ul>
+	</div>
+	<div class="boardTitle cf">
+		<h2>칭찬합니다</h2>
+	</div>
+
+    <div class="viewWrap">
+    	<th:block th:if="${msg}">
+    	    <p th:text="${msg}" style="color:red"></p>
+    	</th:block>
+    	<th:block th:unless="${msg}">
+    	    <div class="viewTitle">
+    	    	<div><span class="lgColor">Q</span><span th:text="${boardForm.title}"></span></div>
+    	    	<span th:text="${boardForm.manager}"></span>
+    	    </div>
+    	    <div class="viewInfo">
+    	    	<div class="infoRight">
+    	    		<div><span class="textStrong">작성일</span><span th:text="${boardForm.date}"></span></div>
+    	    		<div><span class="textStrong">작성자</span><span th:text="${boardForm.name}"></span></div>
+    	    		<div><span class="textStrong">추천수</span><span th:text="${boardForm.push}"></span></div>
+    	    		<div><span class="textStrong">조회수</span><span th:text="${boardForm.views}"></span></div>
+    	    	</div>
+    	    </div>
+    	    <div class="viewContent">
+    	    	<div th:text="${boardForm.contents}" style="white-space:pre-wrap" >게시물 내용</div>
+    	    </div>
+    	    <!--<div class="page" th:each="obj : ${contlist}">
+    	    	<div class="prevPage">
+    	    					<ul>
+    	    						<li>△</li>
+    	    						<li>이전글</li>
+    	    	    				<li th:text="${obj.title}"></li>
+    	    	    				<li><a th:href="@{/board/contents/{no}(no=${obj.no})}" th:text="${obj.title}"></a></li>
+    	    						<li th:text="${obj.date}"></li>
+    	    					</ul>
+    	    	</div>
+    	    	<div class="nextPage">
+    	    					<ul>
+    	    						<li>▽</li>
+    	    						<li>다음글</li>
+									<li th:text="${obj.title}"></li>
+    	    						<li><a th:href="@{/board/contents/{no}(no=${obj.no})}" th:text="${obj.title}"></a></li>
+    	    						<li th:text="${obj.date}"></li>
+    	    					</ul>
+    	    	</div>
+    	    </div>-->
+    	    <div class="hidden" th:text="${boardForm.no}"></div>
+    	</th:block>
+    </div>
+    <div class="makeBtn">
+    	<input class="submitButton" type="submit" value="추천">
+    	<div class="boardMainButton">
+    		<a th:href="@{/board}">메인화면</a>
+    	</div>
+    </div>
+	<div class="infoText">
+		<h3>꼭 확인하세요.</h3>
+		<ul>
+			<li>ㆍ게시물은 관리자의 판단에 따라 삭제될 수 있습니다.</li>
+			<li>ㆍ욕설 및 비방에 글은 삭제됩니다.</li>
+			<li>ㆍ게시물 추천은 로그인 후 가능합니다.</li>
+		</ul>
+	</div>	
+</section>
+</body>
+</html>
