@@ -1,0 +1,44 @@
+﻿/* 중간 섹션 큰틀  */
+#section{width:1420px; margin:0 auto; }
+	.userCheck{width:1420px; font-size: 12px; color:#888888;}
+	.userCheck ul{float:right;}
+	.userCheck ul li{float:left;}
+	.userCheck ul li a{display:block; padding-right:7px; margin-top:17px;}
+	.boardTitle{width:1420px; height:210px; margin-bottom:16px; color:#888888;}
+	.boardTitle h2{font-size:36px; width:200px; height:115px; line-height:150px; color:#333333;}
+	.boardTitle .subTitle{height:100px; font-size:14px;}
+	.boardTitle .subTitle .subTitleStr{display:block; color:#333333; font-size:16px; font-weight:bold;}
+	.boardTitle .subTitle .textEff{color:#333333; font-weight:bold; text-decoration:underline;}
+	
+.formWrap{width:1400px; border:5px solid #f0f0f0; border-radius:10px; padding: 5px;  margin-bottom:30px; }
+	.formBox{width:1000px; margin:20px auto;}
+	.formBox>div{margin-bottom:20px;}
+	label{display:block; width:200px; text-align:left; float:left;}
+	.makeSelect label { height:30px; line-height:30px;}
+	.makeSelect select {border:none; border-bottom:2px solid #dddddd; width:800px; background:none; text-align:left; padding:5px; font-size:14px; font-family: dotum,'돋움',sans-serif;}
+	.makeTitle label { height:30px; line-height:30px;}
+	.makeTitle input {border:none; border-bottom:2px solid #dddddd; width:790px; text-align:left; padding:5px; font-size:14px; font-family: dotum,'돋움',sans-serif; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+	.makeContent textarea {width:784px; border-bottom:2px solid #dddddd; border-radius:5px; padding:6px; font-size:14px; font-family: dotum,'돋움',sans-serif;}
+	.makeDay{height:30px; margin-bottom:20px;}
+	.makeDay div {display:block; width:200px; text-align:left; height:30px; line-height:30px; float:left;}
+	.makeDay .dayDate{width:790px; height:none; padding:5px; font-size:14px; font-family: dotum,'돋움',sans-serif;}
+	.makeName{height:30px; margin-bottom:20px;}
+	.makeName label { height:30px; line-height:30px;}
+	.makeName input {float:left; padding:5px;}
+	
+	.makeBtn{width:350px; margin:50px auto;}
+	.makeBtn div {float:left; margin-right:10px;}
+	
+	.submitButton{border:none; font-size:20px;  background:#e6007e; text-align:center; text-align:center; height:50px; width:170px; line-height:50px; font-weight:bold; border-radius:50px; color:#ffffff;}
+	.submitButton:hover{background:#730024;}
+	
+	.boardMainButton{font-size:20px;  border: 2px solid #bbbbbb; text-align:center; text-align:center; height:46px; width:166px; line-height:46px; font-weight:bold; border-radius:50px;}
+	.boardMainButton:hover{border: 2px solid #e6007e;}
+	.boardMainButton a{color:#333333;}
+	
+.infoText{width:1360px; background:#f8f8f8; border-radius:10px; padding: 30px;  margin-bottom:100px; line-height:2;}
+.infoText h3{font-size:14px; color:#666666;}
+.infoText ul li{font-size:10px; color:#666666;}
+	
+	
+	
