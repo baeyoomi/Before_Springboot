@@ -1,0 +1,81 @@
+﻿/* 중간 섹션 큰틀  */
+#section{width:1420px; margin:0 auto; }
+	.userCheck{width:1420px; font-size: 12px; color:#888888;}
+	.userCheck ul{float:right;}
+	.userCheck ul li{float:left;}
+	.userCheck ul li a{display:block; padding-right:7px; margin-top:17px;}
+	.boardTitle{width:1420px; height:210px; margin-bottom:16px; color:#888888;}
+	.boardTitle h2{font-size:36px; width:200px; height:115px; line-height:150px; color:#333333;}
+	.boardTitle .subTitle{height:100px; font-size:14px;}
+	.boardTitle .subTitle .subTitleStr{display:block; color:#333333; font-size:16px; font-weight:bold;}
+	.boardTitle .subTitle .textEff{color:#333333; font-weight:bold; text-decoration:underline;}
+	
+.formWrap{width:1400px; border:5px solid #f0f0f0; border-radius:10px; padding: 5px;  margin:50px auto; }
+	.formBox{width:1000px; margin:20px auto;}
+	.formBox>div{margin-bottom:20px;}
+	label{display:block; width:200px; text-align:left; float:left;}
+	.makeSelect label { height:30px; line-height:30px;}
+	.makeSelect select {border:none; border-bottom:2px solid #dddddd; width:800px; background:none; text-align:left; padding:5px; font-size:14px; font-family: dotum,'돋움',sans-serif;}
+	.makeTitle label { height:30px; line-height:30px;}
+	.makeTitle input {border:none; border-bottom:2px solid #dddddd; width:790px; text-align:left; padding:5px; font-size:14px; font-family: dotum,'돋움',sans-serif; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+	.makeContent textarea {width:784px; border-bottom:2px solid #dddddd; border-radius:5px; padding:6px; font-size:14px; font-family: dotum,'돋움',sans-serif;}
+	.makeDay{height:30px; width:1000px; margin-bottom:20px;}
+	.makeDay label {display:block; width:200px; text-align:left; height:30px; line-height:30px; float:left;}
+	.makeDay input{padding:5px;}
+	.makeName{height:30px; margin-bottom:20px;}
+	.makeName label { height:30px; line-height:30px;}
+	.makeName input {float:left; padding:5px;}
+	
+	.makeBtn{width:350px; margin:50px auto;}
+	.makeBtn div {float:left; margin-right:10px;}
+	
+	.submitButton{border:none; font-size:20px;  background:#e6007e; text-align:center; text-align:center; height:50px; width:170px; line-height:50px; font-weight:bold; border-radius:50px; color:#ffffff;}
+	.submitButton:hover{background:#730024;}
+	
+	.boardMainButton{font-size:20px;  border: 2px solid #bbbbbb; text-align:center; text-align:center; height:46px; width:166px; line-height:46px; font-weight:bold; border-radius:50px;}
+	.boardMainButton:hover{border: 2px solid #e6007e;}
+	.boardMainButton a{color:#333333;}
+	
+.boardList{margin-bottom:50px;}
+	.boardList h3{display:none; width:1420px; height:50px; line-height:50px; text-align:center; font-size:18px;}
+	.boardList h3.boardDown{display:none;}
+	.boardList h3.boardUp{display:none;}	
+	.boardList .table input[type=submit]{padding:2px 5px; font-size:12px; border: 1px solid #d6d6d6; border-radius:5px;}
+	.boardList .table input[type=submit]:hover{border: 1px solid #ff4cd2; color:#ff4cd2; background:#ffffff;}
+	
+#mainBoard{width:1420px; margin-bottom:30px;}
+	#mainBoard .boardHeader {width:1420px; height:40px; border-top:2px solid #666666; box-shadow: 0px 2px 5px #dddddd; font-size:12px; text-align:center; line-height:40px;}
+	#mainBoard .boardHeader div{float:left; }
+	#mainBoard .boardHeader div.adminHdTitle10{float:right;}
+		.adminHdTitle01{width:70px; }
+		.adminHdTitle02{width:184px;}
+		.adminHdTitle03{width:306px;}
+		.adminHdTitle04{width:200px;}
+		.adminHdTitle05{width:130px;}
+		.adminHdTitle06{width:130px;}
+		.adminHdTitle07{width:130px;}
+		.adminHdTitle08{width:130px;}
+		.adminHdTitle09{width:70px;}
+		.adminHdTitle10{width:70px;}
+
+	.boardContent{width:1420px; height:50px; line-height:50px; border-bottom:1px solid #333333; margin:0 auto;}
+	.boardContent a{color:#888888;}
+	.boardContent div{float:left;}
+	.boardContent .conBox10{float:right;}
+	.boardContent .conBox03 a{padding:5px;}
+	.boardContent .conBox04 a{padding:5px;}
+		.conBox01{width:70px; text-align:center; }
+		.conBox02{width:184px; text-align:center; }
+		.conBox03{width:306px; overflow:hidden; white-space:nowrap; text-overflow: ellipsis; }
+		.conBox04{width:200px; overflow:hidden; white-space:nowrap; text-overflow: ellipsis; }
+		.conBox05{width:130px; text-align:center; font-size:13px;}
+		.conBox06{width:130px; text-align:center; }
+		.conBox07{width:130px; text-align:center; }
+		.conBox08{width:130px; text-align:center; }
+		.conBox09{width:70px; text-align:center; }
+		.conBox10{width:70px; text-align:center; }
+		
+		
+		
+		
+		

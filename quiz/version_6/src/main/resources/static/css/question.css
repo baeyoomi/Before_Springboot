@@ -1,0 +1,51 @@
+﻿/* 중간 섹션 큰틀  */
+#section{width:1420px; margin:0 auto; }
+	#section>h3{width:1200px; height:70px; line-height:70px; text-align:center; font-size:30px; margin:0 auto;}
+	#section>p{width:1420px; text-align:center;}
+	#section .play{width:1420px; height:70px; margin:0 auto;}
+	#section .play .playBtn{display:block; text-align:center; background:#eeeeee; border-radius:20px; width:150px; height:50px; line-height:47px; color:#333333; font-size:20px; border:2px solid #999999; font-weight:bold; margin:0 auto;}
+	#section .play .playBtn:hover{background:#ffffff; color:#ff4cd2; border:2px solid #ff4cd2; }
+
+.quesContent{width:1200px; border-radius:10px; border:5px solid #dddddd; margin: 0 auto; margin-bottom:30px;}
+    .contentLeft{width:600px; float:left; }
+    .contentRight{width:600px; float:right; }
+	.quesContent .conQu{width:550px; height:280px; float:left; margin-left:40px;}
+	.quesContent .conQu>label{display:block; font-size:18px; font-weight:bold; margin:10px 0 10px 0;}
+	.quesContent .conAss{width:550px; float:left; margin-left:40px; margin-bottom:20px;}
+	.quesContent .conAss>label{display:block; font-size:18px; font-weight:bold; margin:10px 0 10px 0;}
+	.quesContent .conAs{width:550px; height:280px; float:right; margin-right:40px;}
+	.quesContent .conAs>label{display:block; font-size:18px; font-weight:bold; margin:10px 0 10px 0;}
+	.quesContent .conAs p{margin-bottom:15px;}
+	.quesContent .conAs p label{float:left; font-size: 20px; margin: 5px; margin-left: 0;}
+	.quesContent .conAs input[type=radio]{appearance:none; width: 20px; height: 20px; border: 1px solid #d6d6d6; border-radius: 50%; float:left; margin:9px; margin-left:0px;}
+	.quesContent .conAs input[type=radio]:checked{width: 20px; height: 20px; border-radius: 50%; background-color: #ff4cd2; border: 2px solid #fff; outline: 1px solid #ff4cd2;}
+	.quesContent .conAu{width:550px; height:100px; float:right;  margin-right:40px;}
+	.quesContent .conAu>label{display:block; font-size:18px; font-weight:bold; margin:10px 0 10px 0;}
+	.quesContent .conAu input[type=text]{width:200px; height:30px; margin-right:5px;}
+	.quesContent .conAu input{float:left;}
+	.quesContent .conAu input[type=submit]{padding:6px 10px; cursor:pointer;}
+
+
+.quizList{width:1420px;  margin-bottom:50px;}
+	.quizList h3{display:none; width:1420px; height:50px; line-height:50px; text-align:center; font-size:18px;}
+	.quizList h3.quizDown{display:none;}
+	.quizList h3.quizUp{display:none;}
+	.quizList .table{display:block; border:1px solid #bbbbbb; font-size:16px;}
+	.quizList .table ul li{float:left; height:30px; line-height:30px; border:1px dotted #cccccc; text-align:center; margin:1px; font-size:14px;}
+		.quizList .table .tbId {width:60px; padding:2px;}
+		.quizList .table .tbQu {width:500px; padding:2px; text-align:left; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+		.quizList .table .tbAss {width:110px; padding:2px; text-align:left; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+		.quizList .table .tbAs {width:50px; padding:2px;}
+		.quizList .table .tbOp {width:100px; padding:2px; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+		.quizList .table .tbAn {width:70px; padding:2px;}
+		.quizList .table .tbBt {width:70px; padding:2px;}
+		.quizList .table .tbBt input[type=submit]{padding:2px 5px; font-size:12px; border: 1px solid #d6d6d6; border-radius:5px;}
+		.quizList .table .tbBt input[type=submit]:hover{border: 1px solid #ff4cd2; color:#ff4cd2; background:#ffffff;}
+		.quizList .table ul.tbTitle {font-weight: bold; font-size:18px; border-bottom:2px solid #666666; height:40px; line-height:40px;}
+		.quizList .table ul.tbTitle .tbQu {text-align:center;}
+		.quizList .table ul.tbTitle .tbAss {text-align:center;}
+
+		
+		
+		
+		
